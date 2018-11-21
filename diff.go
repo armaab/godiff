@@ -104,7 +104,7 @@ func (diff *intDiffer) middleSnake(x1, y1, x2, y2 int) (x, y, u, v int) {
 
 	for d := 1; d <= maxd; d++ {
 		mink, maxk := maxd-d, maxd+d
-		// furthest raching forward d-path on
+		// furthest reaching forward d-path on
 		for k := mink; k <= maxk; k += 2 {
 			if k == mink || (k != maxk && diff.fv[k-1] < diff.rv[k+1]) {
 				x = diff.fv[k+1]
@@ -125,7 +125,7 @@ func (diff *intDiffer) middleSnake(x1, y1, x2, y2 int) (x, y, u, v int) {
 			}
 		}
 
-		// furthest raching forward d-path
+		// furthest reaching forward d-path
 		for k := mink; k <= maxk; k += 2 {
 			if k == maxk || (k != mink && diff.rv[k-1] < diff.rv[k+1]) {
 				u = diff.rv[k-1]
